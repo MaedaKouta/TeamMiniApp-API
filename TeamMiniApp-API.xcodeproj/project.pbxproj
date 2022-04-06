@@ -91,7 +91,6 @@
 				B171D68812E28A942DA80197 /* Pods-TeamMiniApp-API.debug.xcconfig */,
 				FBC26C711A97690244CDC229 /* Pods-TeamMiniApp-API.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -220,7 +219,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 

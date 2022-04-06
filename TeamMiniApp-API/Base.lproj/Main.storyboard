@@ -31,6 +31,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="ニュースを見る">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="ZLK-nh-pVs" kind="show" id="tQp-aM-OFN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -49,6 +52,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="ニュースを見る">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="DaN-Le-W3t" kind="show" id="shd-fW-vSG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -67,6 +73,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852" y="40"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zMD-8R-hac">
+            <objects>
+                <viewController id="DaN-Le-W3t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYS-5V-JHo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="8s7-Pj-FQZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pgF-Kn-Hcs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSL-TC-hb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="499"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l8K-Er-rva">
+            <objects>
+                <viewController id="ZLK-nh-pVs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grH-ZW-PNE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TAt-c6-caC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UlK-y3-Js0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIm-We-oRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="-324"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fHI-Dy-uNx">
