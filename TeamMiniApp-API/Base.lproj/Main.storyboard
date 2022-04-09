@@ -74,21 +74,143 @@
             </objects>
             <point key="canvasLocation" x="852" y="40"/>
         </scene>
-        <!--View Controller-->
+        <!--記事数セレクト-->
         <scene sceneID="zMD-8R-hac">
             <objects>
-                <viewController id="DaN-Le-W3t" sceneMemberID="viewController">
+                <viewController id="DaN-Le-W3t" customClass="BusinessNumberingViewController" customModule="TeamMiniApp_API" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yYS-5V-JHo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="jgm-nJ-chS">
+                                <rect key="frame" x="31" y="224" width="352" height="31"/>
+                                <connections>
+                                    <action selector="changeSlider:" destination="DaN-Le-W3t" eventType="valueChanged" id="quB-FZ-dbh"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-5q-NPb">
+                                <rect key="frame" x="33" y="204" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPh-l7-TvC">
+                                <rect key="frame" x="0.0" y="128" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9l-0x-XrQ">
+                                <rect key="frame" x="123.5" y="429" width="167" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="記事を一覧表示">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="wOn-oS-ykV" kind="show" identifier="toArticlesVCSegue" id="HgA-3Y-fkt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYg-xY-5jP">
+                                <rect key="frame" x="360" y="204" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8s7-Pj-FQZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8s7-Pj-FQZ" firstAttribute="trailing" secondItem="cYg-xY-5jP" secondAttribute="trailing" constant="33" id="DeS-cb-qBv"/>
+                            <constraint firstItem="HPh-l7-TvC" firstAttribute="top" secondItem="8s7-Pj-FQZ" secondAttribute="top" constant="40" id="E2B-g1-NhC"/>
+                            <constraint firstItem="jgm-nJ-chS" firstAttribute="leading" secondItem="8s7-Pj-FQZ" secondAttribute="leading" constant="33" id="JF4-vF-jNG"/>
+                            <constraint firstItem="gg7-5q-NPb" firstAttribute="leading" secondItem="8s7-Pj-FQZ" secondAttribute="leading" constant="33" id="KZV-Zq-0Zx"/>
+                            <constraint firstItem="HPh-l7-TvC" firstAttribute="trailing" secondItem="8s7-Pj-FQZ" secondAttribute="trailing" id="McU-OJ-pZ7"/>
+                            <constraint firstItem="HPh-l7-TvC" firstAttribute="leading" secondItem="8s7-Pj-FQZ" secondAttribute="leading" id="OIj-Cd-2ae"/>
+                            <constraint firstItem="gg7-5q-NPb" firstAttribute="top" secondItem="HPh-l7-TvC" secondAttribute="bottom" constant="40" id="RiJ-IN-rS1"/>
+                            <constraint firstItem="cYg-xY-5jP" firstAttribute="top" secondItem="HPh-l7-TvC" secondAttribute="bottom" constant="40" id="XUG-dj-9ms"/>
+                            <constraint firstItem="jgm-nJ-chS" firstAttribute="top" secondItem="HPh-l7-TvC" secondAttribute="bottom" constant="60" id="XiD-Wb-UoQ"/>
+                            <constraint firstItem="u9l-0x-XrQ" firstAttribute="centerX" secondItem="yYS-5V-JHo" secondAttribute="centerX" id="ZJK-kl-L6U"/>
+                            <constraint firstItem="u9l-0x-XrQ" firstAttribute="centerY" secondItem="yYS-5V-JHo" secondAttribute="centerY" id="fvK-40-4Ve"/>
+                            <constraint firstItem="8s7-Pj-FQZ" firstAttribute="trailing" secondItem="jgm-nJ-chS" secondAttribute="trailing" constant="33" id="yn8-WZ-KFK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pgF-Kn-Hcs"/>
+                    <navigationItem key="navigationItem" title="記事数セレクト" id="pgF-Kn-Hcs"/>
+                    <connections>
+                        <outlet property="SliderValueLabel" destination="HPh-l7-TvC" id="Pz8-gE-S6y"/>
+                        <outlet property="sliderValue" destination="jgm-nJ-chS" id="yf1-dB-hjM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSL-TC-hb4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="499"/>
+            <point key="canvasLocation" x="1928.985507246377" y="498.88392857142856"/>
+        </scene>
+        <!--一覧-->
+        <scene sceneID="EyT-57-dyY">
+            <objects>
+                <tableViewController id="wOn-oS-ykV" customClass="SomeBusinessArticlesTableViewController" customModule="TeamMiniApp_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="JUR-gu-H7J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="138" id="I4a-7M-vuO" customClass="ArticleTableViewCell" customModule="TeamMiniApp_API" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="138"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4a-7M-vuO" id="IW6-Df-O2n">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wOn-oS-ykV" id="YUW-0V-xrl"/>
+                            <outlet property="delegate" destination="wOn-oS-ykV" id="3Cg-c8-tZo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="一覧" id="t8s-m9-9R8"/>
+                    <connections>
+                        <outlet property="tableView" destination="JUR-gu-H7J" id="BTp-mp-5dG"/>
+                        <segue destination="PkV-h5-f6p" kind="show" identifier="ToOnlyBusinessArticleSegue" id="8wj-a6-y8d"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyj-WJ-NNa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807" y="499"/>
+        </scene>
+        <!--ビジネス記事-->
+        <scene sceneID="AMT-5p-xxs">
+            <objects>
+                <viewController storyboardIdentifier="OnlyBusinessArticleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PkV-h5-f6p" customClass="OnlyBusinessArticleViewController" customModule="TeamMiniApp_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvi-PJ-YVh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97U-aC-CjE">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yaD-wy-YcJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="97U-aC-CjE" firstAttribute="trailing" secondItem="yaD-wy-YcJ" secondAttribute="trailing" id="7tt-lg-VTP"/>
+                            <constraint firstAttribute="bottom" secondItem="97U-aC-CjE" secondAttribute="bottom" id="Ie3-2q-ez3"/>
+                            <constraint firstItem="97U-aC-CjE" firstAttribute="leading" secondItem="yaD-wy-YcJ" secondAttribute="leading" id="otT-uJ-TZg"/>
+                            <constraint firstItem="97U-aC-CjE" firstAttribute="top" secondItem="yaD-wy-YcJ" secondAttribute="top" id="sqo-Zl-qCB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ビジネス記事" id="NIO-rR-xFG"/>
+                    <connections>
+                        <outlet property="webView" destination="97U-aC-CjE" id="UyW-6r-6cW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPV-2l-5MJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3695.652173913044" y="498.88392857142856"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="l8K-Er-rva">

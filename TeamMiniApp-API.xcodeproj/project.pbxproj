@@ -15,6 +15,13 @@
 		8781411927FD11460095AECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8781411827FD11460095AECD /* Assets.xcassets */; };
 		8781411C27FD11460095AECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8781411A27FD11460095AECD /* LaunchScreen.storyboard */; };
 		8781412527FD1A910095AECD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8781412427FD1A910095AECD /* .swiftlint.yml */; };
+		87E2CAA12800830400BD269A /* BusinessNumberingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2CAA02800830400BD269A /* BusinessNumberingViewController.swift */; };
+		87E2CAA72800F52A00BD269A /* SomeBusinessArticlesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2CAA62800F52A00BD269A /* SomeBusinessArticlesTableViewController.swift */; };
+		87E2CAA92800F77300BD269A /* LoadApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2CAA82800F77300BD269A /* LoadApiData.swift */; };
+		87E2CAAB2800F7E600BD269A /* NewsArticleStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2CAAA2800F7E600BD269A /* NewsArticleStructure.swift */; };
+		87E2CAB12801009800BD269A /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2CAAF2801009800BD269A /* ArticleTableViewCell.swift */; };
+		87E2CAB22801009800BD269A /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87E2CAB02801009800BD269A /* ArticleTableViewCell.xib */; };
+		87E2CAB428011E6D00BD269A /* OnlyBusinessArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E2CAB328011E6D00BD269A /* OnlyBusinessArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,13 @@
 		8781411B27FD11460095AECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8781411D27FD11460095AECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8781412427FD1A910095AECD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		87E2CAA02800830400BD269A /* BusinessNumberingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessNumberingViewController.swift; sourceTree = "<group>"; };
+		87E2CAA62800F52A00BD269A /* SomeBusinessArticlesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeBusinessArticlesTableViewController.swift; sourceTree = "<group>"; };
+		87E2CAA82800F77300BD269A /* LoadApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadApiData.swift; sourceTree = "<group>"; };
+		87E2CAAA2800F7E600BD269A /* NewsArticleStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleStructure.swift; sourceTree = "<group>"; };
+		87E2CAAF2801009800BD269A /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		87E2CAB02801009800BD269A /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		87E2CAB328011E6D00BD269A /* OnlyBusinessArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyBusinessArticleViewController.swift; sourceTree = "<group>"; };
 		B171D68812E28A942DA80197 /* Pods-TeamMiniApp-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMiniApp-API.debug.xcconfig"; path = "Target Support Files/Pods-TeamMiniApp-API/Pods-TeamMiniApp-API.debug.xcconfig"; sourceTree = "<group>"; };
 		F67185BABEF2E648D9E54220 /* Pods_TeamMiniApp_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamMiniApp_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC26C711A97690244CDC229 /* Pods-TeamMiniApp-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMiniApp-API.release.xcconfig"; path = "Target Support Files/Pods-TeamMiniApp-API/Pods-TeamMiniApp-API.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +87,7 @@
 		8781410E27FD11460095AECD /* TeamMiniApp-API */ = {
 			isa = PBXGroup;
 			children = (
+				87E2CAAC2801002C00BD269A /* Business */,
 				8781410F27FD11460095AECD /* AppDelegate.swift */,
 				8781411127FD11460095AECD /* SceneDelegate.swift */,
 				8781411327FD11460095AECD /* ViewController.swift */,
@@ -83,6 +98,20 @@
 				8781412427FD1A910095AECD /* .swiftlint.yml */,
 			);
 			path = "TeamMiniApp-API";
+			sourceTree = "<group>";
+		};
+		87E2CAAC2801002C00BD269A /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				87E2CAA02800830400BD269A /* BusinessNumberingViewController.swift */,
+				87E2CAA62800F52A00BD269A /* SomeBusinessArticlesTableViewController.swift */,
+				87E2CAB328011E6D00BD269A /* OnlyBusinessArticleViewController.swift */,
+				87E2CAA82800F77300BD269A /* LoadApiData.swift */,
+				87E2CAAA2800F7E600BD269A /* NewsArticleStructure.swift */,
+				87E2CAAF2801009800BD269A /* ArticleTableViewCell.swift */,
+				87E2CAB02801009800BD269A /* ArticleTableViewCell.xib */,
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 		BCDCF2C3849305B3EDE8DD7A /* Pods */ = {
@@ -155,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87E2CAB22801009800BD269A /* ArticleTableViewCell.xib in Resources */,
 				8781412527FD1A910095AECD /* .swiftlint.yml in Resources */,
 				8781411C27FD11460095AECD /* LaunchScreen.storyboard in Resources */,
 				8781411927FD11460095AECD /* Assets.xcassets in Resources */,
@@ -230,7 +260,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8781411427FD11460095AECD /* ViewController.swift in Sources */,
+				87E2CAAB2800F7E600BD269A /* NewsArticleStructure.swift in Sources */,
 				8781411027FD11460095AECD /* AppDelegate.swift in Sources */,
+				87E2CAA92800F77300BD269A /* LoadApiData.swift in Sources */,
+				87E2CAB12801009800BD269A /* ArticleTableViewCell.swift in Sources */,
+				87E2CAB428011E6D00BD269A /* OnlyBusinessArticleViewController.swift in Sources */,
+				87E2CAA12800830400BD269A /* BusinessNumberingViewController.swift in Sources */,
+				87E2CAA72800F52A00BD269A /* SomeBusinessArticlesTableViewController.swift in Sources */,
 				8781411227FD11460095AECD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
