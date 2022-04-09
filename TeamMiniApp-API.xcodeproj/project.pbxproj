@@ -15,6 +15,13 @@
 		8781411927FD11460095AECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8781411827FD11460095AECD /* Assets.xcassets */; };
 		8781411C27FD11460095AECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8781411A27FD11460095AECD /* LaunchScreen.storyboard */; };
 		8781412527FD1A910095AECD /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8781412427FD1A910095AECD /* .swiftlint.yml */; };
+		9553D519280158F200B4C78F /* SelectNumberTecArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553D518280158F200B4C78F /* SelectNumberTecArticleViewController.swift */; };
+		9553D51C2801597700B4C78F /* TecArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553D51B2801597700B4C78F /* TecArticleViewController.swift */; };
+		9553D51E2801598C00B4C78F /* WebTecArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553D51D2801598C00B4C78F /* WebTecArticleViewController.swift */; };
+		9553D52128015DAE00B4C78F /* TecArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553D51F28015DAE00B4C78F /* TecArticleTableViewCell.swift */; };
+		9553D52228015DAE00B4C78F /* TecArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9553D52028015DAE00B4C78F /* TecArticleTableViewCell.xib */; };
+		9553D52428015E5700B4C78F /* GetArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553D52328015E5700B4C78F /* GetArticleData.swift */; };
+		9553D52628015E7B00B4C78F /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9553D52528015E7B00B4C78F /* NewsArticle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,13 @@
 		8781411B27FD11460095AECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8781411D27FD11460095AECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8781412427FD1A910095AECD /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		9553D518280158F200B4C78F /* SelectNumberTecArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNumberTecArticleViewController.swift; sourceTree = "<group>"; };
+		9553D51B2801597700B4C78F /* TecArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TecArticleViewController.swift; sourceTree = "<group>"; };
+		9553D51D2801598C00B4C78F /* WebTecArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebTecArticleViewController.swift; sourceTree = "<group>"; };
+		9553D51F28015DAE00B4C78F /* TecArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TecArticleTableViewCell.swift; sourceTree = "<group>"; };
+		9553D52028015DAE00B4C78F /* TecArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TecArticleTableViewCell.xib; sourceTree = "<group>"; };
+		9553D52328015E5700B4C78F /* GetArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArticleData.swift; sourceTree = "<group>"; };
+		9553D52528015E7B00B4C78F /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		B171D68812E28A942DA80197 /* Pods-TeamMiniApp-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMiniApp-API.debug.xcconfig"; path = "Target Support Files/Pods-TeamMiniApp-API/Pods-TeamMiniApp-API.debug.xcconfig"; sourceTree = "<group>"; };
 		F67185BABEF2E648D9E54220 /* Pods_TeamMiniApp_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamMiniApp_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC26C711A97690244CDC229 /* Pods-TeamMiniApp-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMiniApp-API.release.xcconfig"; path = "Target Support Files/Pods-TeamMiniApp-API/Pods-TeamMiniApp-API.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +87,7 @@
 		8781410E27FD11460095AECD /* TeamMiniApp-API */ = {
 			isa = PBXGroup;
 			children = (
+				9553D51A2801596000B4C78F /* Tec */,
 				8781410F27FD11460095AECD /* AppDelegate.swift */,
 				8781411127FD11460095AECD /* SceneDelegate.swift */,
 				8781411327FD11460095AECD /* ViewController.swift */,
@@ -83,6 +98,20 @@
 				8781412427FD1A910095AECD /* .swiftlint.yml */,
 			);
 			path = "TeamMiniApp-API";
+			sourceTree = "<group>";
+		};
+		9553D51A2801596000B4C78F /* Tec */ = {
+			isa = PBXGroup;
+			children = (
+				9553D518280158F200B4C78F /* SelectNumberTecArticleViewController.swift */,
+				9553D51B2801597700B4C78F /* TecArticleViewController.swift */,
+				9553D51D2801598C00B4C78F /* WebTecArticleViewController.swift */,
+				9553D51F28015DAE00B4C78F /* TecArticleTableViewCell.swift */,
+				9553D52028015DAE00B4C78F /* TecArticleTableViewCell.xib */,
+				9553D52328015E5700B4C78F /* GetArticleData.swift */,
+				9553D52528015E7B00B4C78F /* NewsArticle.swift */,
+			);
+			path = Tec;
 			sourceTree = "<group>";
 		};
 		BCDCF2C3849305B3EDE8DD7A /* Pods */ = {
@@ -159,6 +188,7 @@
 				8781411C27FD11460095AECD /* LaunchScreen.storyboard in Resources */,
 				8781411927FD11460095AECD /* Assets.xcassets in Resources */,
 				8781411727FD11460095AECD /* Main.storyboard in Resources */,
+				9553D52228015DAE00B4C78F /* TecArticleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9553D519280158F200B4C78F /* SelectNumberTecArticleViewController.swift in Sources */,
+				9553D51E2801598C00B4C78F /* WebTecArticleViewController.swift in Sources */,
 				8781411427FD11460095AECD /* ViewController.swift in Sources */,
+				9553D52128015DAE00B4C78F /* TecArticleTableViewCell.swift in Sources */,
+				9553D52628015E7B00B4C78F /* NewsArticle.swift in Sources */,
+				9553D51C2801597700B4C78F /* TecArticleViewController.swift in Sources */,
+				9553D52428015E5700B4C78F /* GetArticleData.swift in Sources */,
 				8781411027FD11460095AECD /* AppDelegate.swift in Sources */,
 				8781411227FD11460095AECD /* SceneDelegate.swift in Sources */,
 			);
