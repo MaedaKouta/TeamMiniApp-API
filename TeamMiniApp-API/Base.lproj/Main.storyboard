@@ -170,7 +170,7 @@
                     <navigationItem key="navigationItem" id="2qd-c2-Ylz"/>
                     <connections>
                         <outlet property="tableView" destination="osl-GS-nWp" id="Lnn-vG-p4S"/>
-                        <segue destination="1WD-us-fdX" kind="show" id="JZW-49-yaF"/>
+                        <segue destination="1WD-us-fdX" kind="show" identifier="WebTecArticleViewControllerSegue" id="JZW-49-yaF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQv-IB-miw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,7 +185,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OpR-Jk-kjD">
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9k7-i0-Rmd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -199,6 +199,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="p4H-Fq-nKE"/>
+                    <connections>
+                        <outlet property="webView" destination="9k7-i0-Rmd" id="b6x-sT-rMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C80-y8-hJR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

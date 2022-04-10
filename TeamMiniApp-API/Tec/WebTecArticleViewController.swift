@@ -6,24 +6,17 @@
 //
 
 import UIKit
-
+import WebKit
 class WebTecArticleViewController: UIViewController {
-
+    var catchWebUrl: String = ""
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let url = URL(string: catchWebUrl)
+        guard let url = url else {
+            return
+        }
+        webView.load(URLRequest(url: url))
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

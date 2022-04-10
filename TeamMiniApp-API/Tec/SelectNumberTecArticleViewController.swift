@@ -8,11 +8,12 @@
 import UIKit
 
 class SelectNumberTecArticleViewController: UIViewController {
-
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var numberTecArticle: UILabel!
+    var getArticle = GetArticle()
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewDidLoad")
 
     }
 

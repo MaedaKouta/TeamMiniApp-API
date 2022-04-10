@@ -9,6 +9,8 @@ import UIKit
 
 class TecArticleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var publishedAtLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
