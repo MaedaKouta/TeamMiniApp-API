@@ -8,8 +8,9 @@
 import UIKit
 import WebKit
 class WebTecArticleViewController: UIViewController {
-    var catchWebUrl: String = ""
-    @IBOutlet weak var webView: WKWebView!
+    public var catchWebUrl: String = ""
+    @IBOutlet private weak var webView: WKWebView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let url = URL(string: catchWebUrl)
@@ -18,5 +19,4 @@ class WebTecArticleViewController: UIViewController {
         }
         webView.load(URLRequest(url: url))
     }
-
 }

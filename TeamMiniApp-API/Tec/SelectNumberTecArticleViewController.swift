@@ -8,27 +8,23 @@
 import UIKit
 
 class SelectNumberTecArticleViewController: UIViewController {
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var numberTecArticle: UILabel!
-    var getArticle = GetArticle()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("viewDidLoad")
-
-    }
-
-    @IBAction func tappedSlider(_ sender: Any) {
+    @IBOutlet private weak var slider: UISlider!
+    @IBOutlet private weak var numberTecArticle: UILabel!
+    
+    @IBAction private func tappedSlider(_ sender: Any) {
         numberTecArticle.text = String(Int(slider.value))
     }
 
-    @IBAction func tappedArticleViewButton(_ sender: Any) {
+    @IBAction private func tappedTecArticleViewButton(_ sender: Any) {
         performSegue(withIdentifier: "tecArticleViewControllerSegue", sender: nil)
     }
+
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "tecArticleViewControllerSegue"{
+        // 画面遷移時にスライダーの値（記事数）を渡す
+        if segue.identifier == "tecArticleViewControllerSegue" {
             let tecArticleVC = segue.destination as! TecArticleViewController
-            tecArticleVC.numberTecArticle = Int(slider.value)
-            // スライダーの値を渡す
+            tecArticleVC.catchNumberTecArticle = Int(slider.value)
         }
     }
 }

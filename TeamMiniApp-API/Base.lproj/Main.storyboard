@@ -132,7 +132,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="記事の一覧を表示"/>
                                 <connections>
-                                    <action selector="tappedArticleViewButton:" destination="ZLK-nh-pVs" eventType="touchUpInside" id="Rx3-5w-Nw6"/>
+                                    <action selector="tappedTecArticleViewButton:" destination="ZLK-nh-pVs" eventType="touchUpInside" id="Wag-C5-faL"/>
                                 </connections>
                             </button>
                         </subviews>
