@@ -13,11 +13,10 @@ protocol GetArticleDelegate: AnyObject{
 class GetArticle{
     weak var delegate: GetArticleDelegate?
     func request(size: Int){
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=jp&pageSize=\(size)&category=technology&apiKey=2dadbe9531074cfe86934358180c7e24")
-        guard let url = url else {
-            return
-        }
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON {
+        let url = "https://newsapi.org/v2/top-headlines?country=jp&pageSize=\(size)&category=technology&apiKey=2dadbe9531074cfe86934358180c7e24"
+        // エンコードしないと、category名が日本語の時に対応できない
+        let encorderUrlString:String = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        AF.request(encorderUrlString, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON {
             response in
             switch response.result{
             case .success:
